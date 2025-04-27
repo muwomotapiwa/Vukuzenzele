@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fffaf5;
+}
+
+header, section, footer {
+    padding: 60px 20px;
+}
+
+:root {
+    --green: #1F7D53;
+    --orange: #E9762B;
+}
+
+nav {
+    background: var(--green);
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 125, 83, 0.6); /* Overlay color with transparency */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+/* Responsive Typography for Banner Text */
+.hero h1 {
+    font-size: calc(2rem + 3vw); /* Scales with viewport width */
+    margin-bottom: 20px;
+    color: var(--orange);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: calc(1rem + 1.5vw); /* Scales with viewport width */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero .btn {
+    background: var(--orange);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: calc(0.8rem + 1vw); /* Scales with viewport width */
+    border-radius: 5px;
+}
+
+.about,
+.products,
+.testimonials,
+.why-choose,
+.gallery,
+.contact {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--orange);
+}
+
+.about img,
+.products img,
+.gallery img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 5px solid var(--orange);
+    box-shadow: 0 4px 10px rgba(233, 118, 43, 0.5);
+}
+
+.products-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    background: #fff3e6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--orange);
+}
+
+.why-choose {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.why-choose div {
+    background: #fff3e6;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid var(--orange);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.submit-btn {
+    background: var(--green);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background: var(--green);
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background: var(--green);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .hero h1 {
+        font-size: calc(1.5rem + 2vw);
+    }
+
+    .hero p {
+        font-size: calc(0.8rem + 1vw);
+    }
+
+    .hero .btn {
+        font-size: calc(0.6rem + 0.8vw);
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vukuzenzele Steel Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Vukuzenzele</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+            <li><a href="#products" onclick="closeMenu()">Products</a></li>
+            <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
+            <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Us</a></li>
+            <li>
+                <select onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="sh">Shona</option>
+                    <option value="nd">Ndebele</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <!-- Banner Image -->
+        <img src="assets/bannerImage.jpeg" alt="Banner Image" class="banner-image">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 data-en="High-Quality Ox-Drawn Scotch Carts" 
+                data-sh="Makarati anosanganisira ox akanyatsogadziriswa" 
+                data-nd="Amakhadi ase ox adlulisayo">High-Quality Ox-Drawn Scotch Carts</h1>
+            <p data-en="Durable, Reliable, and Locally Made Solutions for Your Farming Needs" 
+               data-sh="Zvinhu zvakanaka, zvinoitika, uye zvinowanikwa pachikonzero yako rekugadzira" 
+               data-nd="Izinto ezikhona ngempumelelo, ezithembekileyo kanye nezifakwe ekuhlaleni kwakho lokuhlala">
+               Durable, Reliable, and Locally Made Solutions for Your Farming Needs
+            </p>
+            <a href="#contact"><button class="btn" data-en="Contact Us" data-sh="Taura nesu" data-nd="Thumela amaphoyisa">Contact Us</button></a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <h2 data-en="About Us" data-sh="Nezvei" data-nd="Ngokwethu">About Us</h2>
+        <p data-en="Vukuzenzele Steel Projects is committed to providing high-quality ox-drawn Scotch carts for farmers across Zimbabwe, focusing on strength, reliability, and affordability." 
+           data-sh="Vukuzenzele Steel Projects inenge yakabatanidza kuti igadzire makarati anosanganisira ox anowanikwa nevanhu vese vegaZimbabwe, ine kuita kusimba, kuwanana, uye kuchepa."
+           data-nd="Vukuzenzele Steel Projects ibekele ekunikeza amakhadi ase ox adlulisayo ngokuphepha, okusebenza kahle futhi okusho esizweni samabhunu eZimbabwe.">
+           Vukuzenzele Steel Projects is committed to providing high-quality ox-drawn Scotch carts for farmers across Zimbabwe, focusing on strength, reliability, and affordability.
+        </p>
+        <!-- Updated About Us Image -->
+        <img src="assets/vlogo.jpeg" alt="About Us Image" class="about-image">
+    </section>
+
+    <section class="products" id="products">
+        <h2 data-en="Our Products" data-sh="Zvinhu Zvedu" data-nd="Amakhadi Ethu">Our Products</h2>
+        <div class="products-grid">
+            <img src="assets/b3.jpeg" alt="Product 1">
+            <img src="assets/c1.jpeg" alt="Product 2">
+            <img src="assets/c2.jpeg" alt="Product 3">
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h2 data-en="Testimonials" data-sh="Ndima" data-nd="Imibono">Testimonials</h2>
+        <div class="testimonial">
+            <p data-en='"Fantastic service and amazing quality carts! Highly recommended." - John D.' 
+               data-sh='"Sarudzo rakanaka uye zvinhu zvakanyatsogadzirwa! Inoratidzwa zvakanaka." - John D.'
+               data-nd='"Inkonzo enhle kanye namakhadi omuhle! Kuyacelwa kakhulu." - John D.'>
+               "Fantastic service and amazing quality carts! Highly recommended." - John D.
+            </p>
+        </div>
+        <div class="testimonial">
+            <p data-en='"Strong, durable, and locally made. Perfect for our farm." - Mary K.' 
+               data-sh='"Rinofambisa, rinotungamira, uye rinowanikwa pachikonzero. Rinonyanya!" - Mary K.'
+               data-nd='"Izinhle izikhiqiza izifanele yebo ndawonye. Iphakamise!" - Mary K.'>
+               "Strong, durable, and locally made. Perfect for our farm." - Mary K.
+            </p>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <h2 data-en="Why Choose Us?" data-sh="Sei usarudze iwe?" data-nd="Kungani ukhethe thina?">Why Choose Us?</h2>
+        <div>
+            <h3 data-en="Durability" data-sh="Kuita simba" data-nd="Ukusebenza kahle">Durability</h3>
+            <p data-en="Built to withstand tough conditions." 
+               data-sh="Gadzirwa kuti risimba mamwe maererano." 
+               data-nd="Yenkuliwe ukuthi ithole izimo ezinzile.">
+               Built to withstand tough conditions.
+            </p>
+        </div>
+        <div>
+            <h3 data-en="Local Expertise" data-sh="Chiedza chekunzwe" data-nd="Ulwazi lwendawo">Local Expertise</h3>
+            <p data-en="Understanding the needs of Zimbabwean farmers." 
+               data-sh="Kuita kusimba kwevanhu vegaZimbabwe." 
+               data-nd="Ukucabanga izidingo zabahlaleni baseZimbabwe.">
+               Understanding the needs of Zimbabwean farmers.
+            </p>
+        </div>
+        <div>
+            <h3 data-en="Customer Support" data-sh="Musimboti waununuri" data-nd="Inkulumo yamaphoyisa">Customer Support</h3>
+            <p data-en="We are here for you every step of the way." 
+               data-sh="Tiri pano kune imwe nzira yese." 
+               data-nd="Siyaphela njalo ngezinye izinyathelo.">
+               We are here for you every step of the way.
+            </p>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2 data-en="Gallery" data-sh="Zvakananga" data-nd="Isigaba sombali">Gallery</h2>
+        <div class="gallery-grid">
+            <img src="assets/c3.jpeg" alt="Gallery Image C3">
+            <img src="assets/c4.jpeg" alt="Gallery Image C4">
+            <img src="assets/c5.jpeg" alt="Gallery Image C5">
+            <img src="assets/c6.jpeg" alt="Gallery Image C6">
+            <img src="assets/c7.jpeg" alt="Gallery Image C7">
+            <img src="assets/c8.jpeg" alt="Gallery Image C8">
+            <img src="assets/b1.jpeg" alt="Gallery Image B1">
+            <img src="assets/b2.jpeg" alt="Gallery Image B2">
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 data-en="Contact Us for a Quote" data-sh="Taura nesu kuti upinde" data-nd="Thumela amaphoyisa ukuphakamisa">Contact Us for a Quote</h2>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit" class="submit-btn" data-en="Submit" data-sh="Tumira" data-nd="Thumela">Submit</button>
+        </form>
+        <p style="margin-top:20px;" data-en="Or call us directly: +27 66 423 4732 | +27 73 865 2722" 
+           data-sh="Kana kutaura zvakanaka: +27 66 423 4732 | +27 73 865 2722" 
+           data-nd="Okanye sicela usithumele ngqo: +27 66 423 4732 | +27 73 865 2722">
+           Or call us directly: +27 66 423 4732 | +27 73 865 2722
+        </p>
+    </section>
+
+    <footer>
+        <p data-en="Vukuzenzele Steel Projects &copy; 2025. All Rights Reserved." 
+           data-sh="Vukuzenzele Steel Projects &copy; 2025. Zvese zvinoshandiswa." 
+           data-nd="Vukuzenzele Steel Projects &copy; 2025. Konke ukwanelwa.">
+           Vukuzenzele Steel Projects &copy; 2025. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
