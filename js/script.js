@@ -7,7 +7,7 @@ const galleryImages = [];
 const productData = {
     'standard': {
         title: 'Standard Ox Cart',
-        image: 'assets/b3.jpeg',
+        image: 'assets/b3.jpg',
         description: 'Our Standard Ox Cart is the perfect solution for general farming and transportation needs. Built with high-quality materials and designed for durability, this cart offers excellent value for money while maintaining the reliability that Zimbabwean farmers depend on.',
         specifications: [
             'Load Capacity: 1.5 - 2 tons',
@@ -28,7 +28,7 @@ const productData = {
     },
     'heavy-duty': {
         title: 'Heavy Duty Cart',
-        image: 'assets/c1.jpeg',
+        image: 'assets/c1.jpg',
         description: 'Built for the most demanding agricultural work, our Heavy Duty Cart can handle substantial loads and challenging conditions. This cart features reinforced construction and enhanced capacity, making it ideal for commercial farming operations and heavy transportation needs.',
         specifications: [
             'Load Capacity: 3 - 4 tons',
@@ -49,7 +49,7 @@ const productData = {
     },
     'custom': {
         title: 'Custom Solutions',
-        image: 'assets/c2.jpeg',
+        image: 'assets/c2.jpg',
         description: 'Every farm has unique needs, and our Custom Solutions service ensures you get exactly what you require. We work closely with you to design and build ox carts that meet your specific requirements, whether it\'s special dimensions, unique features, or specialized applications.',
         specifications: [
             'Load Capacity: Customizable',
