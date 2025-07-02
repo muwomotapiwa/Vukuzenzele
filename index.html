@@ -446,38 +446,46 @@
                         </div>
                     </div>
                     
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <div class="form-field">
-                                <input type="text" id="firstName" name="firstName" class="form-input" required>
-                                <label for="firstName" class="form-label">First Name</label>
-                            </div>
-                            <div class="form-field">
-                                <input type="text" id="lastName" name="lastName" class="form-input" required>
-                                <label for="lastName" class="form-label">Last Name</label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-field">
-                            <input type="email" id="email" name="email" class="form-input" required>
-                            <label for="email" class="form-label">Email Address</label>
-                        </div>
-                        
-                        <div class="form-field">
-                            <input type="tel" id="phone" name="phone" class="form-input" required>
-                            <label for="phone" class="form-label">Phone Number</label>
-                        </div>
-                        
-                        <div class="form-field">
-                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
-                            <label for="message" class="form-label">Message</label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loading">Sending...</span>
-                        </button>
-                    </form>
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="a3bd9256-1b44-4179-8c6e-d1f8e304b05f">
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+    <div class="form-group">
+        <div class="form-field">
+            <input type="text" id="firstName" name="First Name" class="form-input" required placeholder=" ">
+            <label for="firstName" class="form-label">First Name</label>
+        </div>
+        <div class="form-field">
+            <input type="text" id="lastName" name="Last Name" class="form-input" required placeholder=" ">
+            <label for="lastName" class="form-label">Last Name</label>
+        </div>
+    </div>
+    
+    <div class="form-field">
+        <input type="email" id="email" name="Email" class="form-input" required placeholder=" ">
+        <label for="email" class="form-label">Email Address</label>
+    </div>
+    
+    <div class="form-field">
+        <input type="tel" id="phone" name="Phone Number" class="form-input" required placeholder=" ">
+        <label for="phone" class="form-label">Phone Number</label>
+    </div>
+    
+    <div class="form-field">
+        <textarea id="message" name="Message" class="form-textarea" rows="5" required placeholder=" "></textarea>
+        <label for="message" class="form-label">Message</label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary btn-full">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loading">Sending...</span>
+    </button>
+</form>
+
                 </div>
             </div>
         </section>
