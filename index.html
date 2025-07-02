@@ -584,6 +584,32 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("✅ Your message has been sent successfully!");
+            form.reset();
+        } else {
+            alert("❌ There was an error sending your message.");
+        }
+    })
+    .catch(error => {
+        alert("❌ An error occurred while submitting the form.");
+    });
+});
+</script>
+
 </body>
 </html>
 
